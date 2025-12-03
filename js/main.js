@@ -2,21 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const burger = document.getElementById("burger");
     const navList = document.querySelector(".header__list");
 
-    // Burger menyu
+
     burger.onclick = () => {
         burger.classList.toggle("active");
         navList.classList.toggle("active");
     };
-
-    // ===== HERO SLIDER =====
-    const slides = document.querySelectorAll('.hero__image'); // rasm elementlari
-    const dotsContainer = document.querySelector('.dots');   // dots container
+    const slides = document.querySelectorAll('.hero__image'); 
+    const dotsContainer = document.querySelector('.dots'); 
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
     let currentSlide = 0;
     let slideInterval;
 
-    // 1. Dotlarni yaratish
+
     slides.forEach((_, i) => {
         const dot = document.createElement('div');
         dot.classList.add('dot');
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startInterval() {
         slideInterval = setInterval(() => {
             showSlide(currentSlide + 1);
-        }, 3000); // 3 soniya
+        }, 3000);
     }
 
     function resetInterval() {
@@ -53,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startInterval();
     }
 
-    // 4. Prev / Next tugmalar
+
     if(prevBtn && nextBtn){
         prevBtn.addEventListener('click', () => { 
             showSlide(currentSlide - 1); 
@@ -97,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderProducts(products);
 
-    // ===== Category Filter =====
+
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -167,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const div = document.createElement("div");
         div.classList.add("blog-card");
 
-        // gradient overlay qo'shish uchun wrapper yaratish
+
         div.innerHTML = `
             <div class="blog-img-wrapper" style="position:relative; overflow:hidden; border-radius:12px;">
                 <img src="${post.img}" alt="${post.title}">
@@ -197,9 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const decreaseBtn = document.getElementById("decrease");
     const increaseBtn = document.getElementById("increase");
     const quantityInput = document.getElementById("quantity");
-    const wishlistBtn = document.querySelector(".wishlist i");
-
-    // Quantity increase / decrease
+ 
+   const wishlistBtn = document.querySelector(".wishlist i");
     decreaseBtn.addEventListener("click", () => {
         let value = parseInt(quantityInput.value);
         if (value > 1) quantityInput.value = value - 1;
@@ -210,10 +207,10 @@ document.addEventListener("DOMContentLoaded", () => {
         quantityInput.value = value + 1;
     });
 
-    // Wishlist toggle
+
     wishlistBtn.addEventListener("click", () => {
-        wishlistBtn.classList.toggle("fas"); // solid heart
-        wishlistBtn.classList.toggle("far"); // regular heart
+        wishlistBtn.classList.toggle("fas"); 
+        wishlistBtn.classList.toggle("far"); 
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
@@ -222,10 +219,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     thumbnails.forEach(thumb => {
         thumb.addEventListener("click", () => {
-            // Asosiy rasmni o'zgartirish
+ 
             mainImage.src = thumb.src;
-
-            // Active class boshqalaridan olib tashlash
+  
             thumbnails.forEach(t => t.classList.remove("active"));
             thumb.classList.add("active");
         });
@@ -238,12 +234,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
             const target = tab.dataset.tab;
-
-            // Active classlarni tozalash
-            tabs.forEach(t => t.classList.remove("active"));
+  
+          tabs.forEach(t => t.classList.remove("active"));
             contents.forEach(c => c.classList.remove("active"));
-
-            // Yangi active qo‘yish
+  
             tab.classList.add("active");
             document.getElementById(target).classList.add("active");
         });
@@ -311,16 +305,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const increaseBtn = document.getElementById("increase");
     const quantityInput = document.getElementById("quantity");
     const totalPriceSpan = document.getElementById("totalPrice");
-
-    // Mahsulot asl narxi
+ 
     const price = parseFloat(document.getElementById("productPrice").innerText);
-
-    // Dastlabki quantity va total
+ 
     let quantity = 1;
     quantityInput.value = quantity;
     totalPriceSpan.innerText = price.toFixed(2);
-
-    // - tugma
+  
     decreaseBtn.addEventListener("click", () => {
         if(quantity > 1){
             quantity--;

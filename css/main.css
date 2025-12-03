@@ -1,7 +1,5 @@
 
-/*======================
-  GLOBAL RESET
-=======================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +9,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/*======================
-  HEADER STYLES
-=======================*/
+
 header {
   background: #fff;
   box-shadow: 0 1px 10px rgba(0,0,0,0.08);
@@ -34,7 +30,7 @@ header {
   height: 80px;
 }
 
-/* Desktop menu */
+
 .header__list {
   display: flex;
   gap: 35px;
@@ -48,7 +44,7 @@ header {
   transition: 0.3s;
 }
 
-/* Underline hover animation */
+
 .header__link::after {
   content: "";
   position: absolute;
@@ -69,7 +65,7 @@ header {
   color: #4CAF50;
 }
 
-/* Right icons + button */
+
 .header__container span {
   display: flex;
   align-items: center;
@@ -87,7 +83,7 @@ header {
   color: #4CAF50;
 }
 
-/* Login button */
+
 .header__btn {
   padding: 10px 22px;
   background: #4CAF50;
@@ -103,13 +99,11 @@ header {
   background: #43a047;
 }
 
-/*======================
-  BURGER MENU STYLES
-=======================*/
+
 .burger {
   width: 30px;
   height: 22px;
-  display: none;               /* Desktopda yashirin */
+  display: none;            
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
@@ -125,7 +119,7 @@ header {
   transition: all 0.3s ease;
 }
 
-/* X holati animatsiyasi */
+
 .burger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -142,21 +136,19 @@ header {
   background-color: #4CAF50;
 }
 
-/*======================
-  MOBILE MENU
-=======================*/
+
 @media (max-width: 1024px) {
-  /* Burger ko‘rinadi */
+
   .burger {
     display: flex;
   }
 
-  /* Menu mobilga moslashadi */
+
 .header__list {
   position: fixed;
   top: 0;
-  left: -100%;        /* O‘ngdan emas, chapdan yashirin */
-  width: 260px;       /* yoki 80% ekran kengligi */
+  left: -100%; 
+  width: 260px;
   height: 100vh;
   background: #f9f9f9;
   flex-direction: column;
@@ -164,13 +156,13 @@ header {
   align-items: center;
   gap: 40px;
   padding-top: 60px;
-  transition: left 0.4s ease; /* right -> left */
-  box-shadow: 2px 0 15px rgba(0,0,0,0.1); /* chap tomonda soya */
+  transition: left 0.4s ease; 
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1); 
   z-index: 998;
 }
 
 .header__list.active {
-  left: 0;           /* Menu ochilganda chapdan chiqadi */
+  left: 0;    
 }
 
 
@@ -192,7 +184,7 @@ header {
     transform: scale(1.1);
   }
 
-  /* Right icons va login button mobilga moslashadi */
+
   .header__container span {
     gap: 15px;
   }
@@ -203,9 +195,7 @@ header {
   }
 }
 
-/*======================
-  TABLET STYLES
-=======================*/
+
 @media (max-width: 768px) {
   .header__list {
     width: 220px;
@@ -241,7 +231,7 @@ header {
     padding: 60px 0;
 }
 
-/* LEFT TEXT */
+
 .hero__text {
     max-width: 450px;
     display: flex;
@@ -271,7 +261,7 @@ header {
     line-height: 1.5;
 }
 
-/* BUTTON */
+
 .hero__btn {
     width: 140px;
     padding: 12px 20px;
@@ -288,7 +278,7 @@ header {
     background: #43A047;
 }
 
-/* RIGHT IMAGE */
+
 .hero__image-container {
     position: relative;
     width: 420px;
@@ -311,7 +301,7 @@ header {
 
 @media (max-width: 900px) {
     .hero__container {
-        flex-direction: column; /* matn pastda, rasm ustida */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
     }
@@ -329,7 +319,7 @@ header {
     }
 
     .hero__image {
-        position: absolute; /* faqat 1 ta rasm ko‘rsin */
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -339,7 +329,7 @@ header {
 
     .hero__image.active {
         opacity: 1;
-        position: relative; /* faqat aktiv slide relative bo‘lsin */
+        position: relative;
     }
 
     .dots {
@@ -362,7 +352,7 @@ header {
     opacity: 1;
 }
 
-/* BUTTONS */
+
 .prev,
 .next {
     position: absolute;
@@ -389,9 +379,11 @@ header {
 .next {
     right: 10px;
 }
-/* DOTS umumiy */
+
+
 .dots {
-    position: absolute; /* desktop uchun */
+    position: absolute; 
+    
     top: 450px;
     width: 100%;
     display: flex;
@@ -413,12 +405,12 @@ header {
     transform: scale(1.2);
 }
 
-/* MOBIL mediada dotsni rasm ostiga joylash */
+
 @media (max-width: 900px) {
     .dots {
-        position: relative; /* absolute ni olib tashlash */
+        position: relative; 
         top: auto;
-        margin-top: 10px; /* rasm va dots orasida joy */
+        margin-top: 10px; 
     }
 }
 .main {
@@ -436,7 +428,7 @@ header {
     flex-wrap: wrap;
 }
 
-/* ===== Filter Panel ===== */
+
 .filter-panel {
     flex: 1;
     min-width: 240px;
@@ -505,7 +497,7 @@ header {
     width: 100%;
 }
 
-/* ===== Product Section ===== */
+
 .product-section {
     flex: 3;
     min-width: 650px;
@@ -517,7 +509,7 @@ header {
     gap: 20px;
 }
 
-/* ===== Product Card ===== */
+
 .product-card {
     position: relative;
     background-size: cover;
@@ -570,7 +562,7 @@ header {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
-/* ===== Pagination ===== */
+
 .pagination {
     margin-top: 20px;
     display: flex;
@@ -599,7 +591,7 @@ header {
     background: #27ae60;
 }
 
-/* ===== Responsive ===== */
+
 @media screen and (max-width: 1024px) {
     .main__container {
         flex-direction: column;
@@ -609,7 +601,7 @@ header {
         min-width: 100%;
     }
 }
-/* ===== BLOG SECTION ===== */
+
 .blog__posts {
     padding: 2rem 1rem;
     background-color: #f9f9f9;
@@ -627,14 +619,14 @@ header {
     color: #555;
 }
 
-/* ===== BLOG GRID ===== */
+
 .blog__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* ===== BLOG CARD ===== */
+
 .blog-card {
     background-color: #fff;
     border-radius: 12px;
