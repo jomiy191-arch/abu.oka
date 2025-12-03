@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <link rel="stylesheet" href="./shop.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <img src="./images/logo.svg" alt="logo" class="logo">
+                <nav class="nav">
+                    <ul class="header__list">
+                        <li><a class="header__link" href="index.html">Home</a></li>
+                        <li><a class="header__link" href="shop.html">Shop</a></li>
+                        <li><a class="header__link" href="plant.html">Plant Care</a></li>
+                        <li><a class="header__link" href="blog.html">Blogs</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-search"></i>
+                    <button class="header__btn">Login</button>
+                </span>
+                <div id="burger" class="burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="container">
+            <div class="hero__container">
+
+                <div class="hero__text">
+                    <p class="hero__small-text">Welcome to GreenShop</p>
+                    <h1 class="hero__title">Let's Make a Better <span>Planet</span></h1>
+                    <p class="hero__desc">We are an online plant shop offering a wide range of cheap and trendy plants.
+                        Use our plants to create a unique Urban Jungle. Order your favorite plants!</p>
+                    <button class="hero__btn">SHOP NOW</button>
+                </div>
+
+                <div class="hero__image-container">
+                    <img src="./images/slider1.svg" class="hero__image active">
+                    <img src="./images/slider2.svg" class="hero__image">
+                    <img src="./images/slider2.svg" class="hero__image">
+                    <div class="dots"></div> <!-- shu bo‘lishi shart -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <main class="main">
+        <div class="container">
+            <div class="main__container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="filter-panel">
+                    <h3>Categories</h3>
+                    <button class="filter-btn" data-category="all">All Plants</button>
+                    <button class="filter-btn" data-category="house">House Plants</button>
+                    <button class="filter-btn" data-category="potter">Potter Plants</button>
+                    <button class="filter-btn" data-category="seeds">Seeds</button>
+                    <button class="filter-btn" data-category="small">Small Plants</button>
+
+                    <h3>Price</h3>
+                    <input type="range" min="10" max="200" value="100" id="priceRange">
+                    <br>
+                    <span id="priceValue">$100</span>
+
+                    <button id="priceFilter">Filter</button>
+                    <h1 class="main__title">Size</h1>
+                    <p>small (119)</p>
+                    <p>medium (86)</p>
+                    <p>large (78)</p>
+                    <img src="./images/super.svg" alt="">
+                </div>
+                <div class="product-section">
+                    <div class="product-grid">
+                    </div>
+                    <div class="pagination">
+                        <button class="page-btn" data-page="1">1</button>
+                        <button class="page-btn" data-page="2">2</button>
+                        <button class="page-btn" data-page="3">3</button>
+                        <button class="page-btn" data-page="4">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="blog__posts">
+        <div class="container">
+            <h2>Our Blog Posts</h2>
+            <p class="blog__text">We are an online plant shop offering a wide range of cheap and trendy plants.</p>
+            <div class="blog__grid">
+                <!-- JS orqali postlar keladi -->
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

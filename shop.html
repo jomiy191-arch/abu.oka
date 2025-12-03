@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- index.html header qismi -->
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <img src="./images/logo.svg" alt="logo" class="logo">
+                <nav class="nav">
+                    <ul class="header__list">
+                        <li><a class="header__link" href="index.html">Home</a></li>
+                        <li><a class="header__link" href="shop.html">Shop</a></li>
+                        <li><a class="header__link" href="plant.html">Plant Care</a></li>
+                        <li><a class="header__link" href="blog.html">Blogs</a></li>
+                    </ul>
+                </nav>
+                <span>
+                    <i class="fa fa-shopping-cart"></i>
+                    <i class="fa fa-search"></i>
+                    <button class="header__btn">Login</button>
+                </span>
+                <div id="burger" class="burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-detail">
+        <div class="container">
+            <div class="product-detail__breadcrumb">
+                <p>Home / <span>Shop</span></p>
+            </div>
+
+            <div class="product-detail__content">
+                <div class="product-detail__image-gallery">
+                    <div class="thumbnails">
+                        <img src="./images/bos1.svg" alt="Thumbnail 1" class="thumb active">
+                        <img src="./images/bos2.svg" alt="Thumbnail 2" class="thumb">
+                        <img src="./images/bos3.svg" alt="Thumbnail 3" class="thumb">
+                        <img src="./images/bos4.svg" alt="Thumbnail 4" class="thumb">
+                    </div>
+                    <div class="main-image">
+                        <img src="./images/gul4.svg" alt="Barberton Daisy" id="currentImage">
+                    </div>
+                </div>
+
+
+                <!-- Product Info -->
+                <div class="product-detail__info">
+                    <h1 class="product-title">Barberton Daisy</h1>
+                    <div class="product-price-rating">
+                        <p class="product-price">$119.00</p>
+                        <div class="product-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>19 Customer Reviews</span>
+                        </div>
+
+                    </div>
+
+                    <h3>Short Description:</h3>
+                    <p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the
+                        ground.</p>
+
+                    <h3>Size:</h3>
+                    <div class="product-sizes">
+                        <span>S</span>
+                        <span>M</span>
+                        <span>L</span>
+                        <span>XL</span>
+                    </div>
+
+                    <div class="product-quantity">
+                        <button id="decrease">-</button>
+                        <input type="text" id="quantity" value="1" readonly>
+                        <button id="increase">+</button>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="buy-now">Buy NOW</button>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="fa fa-heart"></i></button>
+                    </div>
+
+                    <p>SKU: 1995751877966</p>
+                    <p>Categories: Potter Plants</p>
+                    <p>Tags: Home, Garden, Plants</p>
+
+                    <div class="product-share">
+                        <h3>Share this product:</h3>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="product-tabs">
+        <ul class="tab-buttons">
+            <li class="active" data-tab="description">Product Description</li>
+            <li data-tab="reviews">Reviews (19)</li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="description" class="tab active">
+                <ul>
+                    <li>
+                        <p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the
+                            ground.
+                            The ceramic cylinder planters come with a wooden stand to help elevate your plants off the
+                            ground.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est
+                            tristique
+                            auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida
+                            semper.
+                            Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
+                        <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum
+                            turpis eros
+                            eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget
+                            sagittis
+                            vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor
+                            sit
+                            amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi
+                            posuere
+                            nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a
+                            nunc. Etiam
+                            gravida vehicula tellus, in imperdiet ligula euismod eget.</p>
+            </div>
+
+            <div id="reviews" class="tab">
+                <h4>Living Room:</h4>
+                <p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                <h4>Dining Room:</h4>
+                <p>The benefits of houseplants are endless. They clean the air, improve mood, reduce stress, and provide
+                    better sleep. Fill every room with houseplants and enjoy their restorative qualities.</p>
+
+                <h4>Office:</h4>
+                <p>The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="main1">
+        <div class="container">
+            <div class="main1__container">
+                <div class="product-gallery">
+                    <div class="gallery-images">
+                    </div>
+
+                    <div class="gallery">
+                        <div class="gallery-images"></div>
+                        <div class="gallery-pagination">
+                            <button class="page-btn" data-page="1">1</button>
+                            <button class="page-btn" data-page="2">2</button>
+                            <button class="page-btn" data-page="3">3</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
