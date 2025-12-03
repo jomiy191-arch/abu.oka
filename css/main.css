@@ -506,7 +506,7 @@ header {
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+    gap: 50px;
 }
 
 
@@ -514,12 +514,12 @@ header {
     position: relative;
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
+    border-radius: 20px;
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 15px;
+    padding: 02px;
     color: #fff;
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     cursor: pointer;
