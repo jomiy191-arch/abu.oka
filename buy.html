@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="shop.html">
+    <link rel="stylesheet" href="./normalize/normalize.css">
+    <title>Buy Now - GreenShop</title>
+</head>
+<body>
+    <header class="header" id="#buy">
+        <div class="container">
+            <div class="header__container">
+                <img src="./images/logo.svg" alt="logo" class="logo">
+                <nav class="nav">
+                    <ul class="header__list">
+                        <li><a class="header__link" href="index.html">Home</a></li>
+                        <li><a class="header__link" href="shop.html">Shop</a></li>
+                        <li><a class="header__link" href="plant.html">Plant Care</a></li>
+                        <li><a class="header__link" href="blog.html">Blogs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+   <main class="buy-now-page">
+    <div class="container">
+        <h1>Buy Now</h1>
+        <p>Thank you for choosing your plant! You can complete your order here.</p>
+
+        <div class="product-selected">
+            <img src="images/gul1.svg" alt="Angel Wing Begonia" class="product-img">
+            <div class="product-info">
+                <h3>Angel Wing Begonia</h3>
+                <p>Price: $<span id="productPrice">120</span></p>
+                <div class="quantity-control">
+                    <button id="decrease">−</button>
+                    <input type="text" id="quantity" value="1" readonly>
+                    <button id="increase">+</button>
+                </div>
+                <p>Total: $<span id="totalPrice">120</span></p>
+            </div>
+        </div>
+        <script src="./js/main.js"></script>
+</body>
+</html>

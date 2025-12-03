@@ -260,7 +260,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "images/tuvak4.svg","images/slider1.svg","images/slider2.svg"
     ];
 
-    // Random tartib
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -294,5 +293,46 @@ document.addEventListener("DOMContentLoaded", () => {
             const page = parseInt(btn.dataset.page);
             renderPage(page);
         });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const buyButtons = document.querySelectorAll(".buy-now");
+
+    buyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            window.location.href = "buy.html";
+        });
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const decreaseBtn = document.getElementById("decrease");
+    const increaseBtn = document.getElementById("increase");
+    const quantityInput = document.getElementById("quantity");
+    const totalPriceSpan = document.getElementById("totalPrice");
+
+    // Mahsulot asl narxi
+    const price = parseFloat(document.getElementById("productPrice").innerText);
+
+    // Dastlabki quantity va total
+    let quantity = 1;
+    quantityInput.value = quantity;
+    totalPriceSpan.innerText = price.toFixed(2);
+
+    // - tugma
+    decreaseBtn.addEventListener("click", () => {
+        if(quantity > 1){
+            quantity--;
+            quantityInput.value = quantity;
+            totalPriceSpan.innerText = (price * quantity).toFixed(2);
+        }
+    });
+
+    // + tugma
+    increaseBtn.addEventListener("click", () => {
+        quantity++;
+        quantityInput.value = quantity;
+        totalPriceSpan.innerText = (price * quantity).toFixed(2);
     });
 });
