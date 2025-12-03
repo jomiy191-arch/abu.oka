@@ -1,19 +1,29 @@
 
+/*======================
+  GLOBAL RESET
+=======================*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  font-family: 'Arial', sans-serif;
 }
 
+/*======================
+  HEADER STYLES
+=======================*/
 header {
   background: #fff;
   box-shadow: 0 1px 10px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 100;
 }
 
 .container {
   width: 90%;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -24,22 +34,21 @@ header {
   height: 80px;
 }
 
+/* Desktop menu */
 .header__list {
   display: flex;
   gap: 35px;
-  list-style: none;
 }
 
 .header__link {
   font-size: 18px;
   color: #333;
-  text-decoration: none;
   position: relative;
   padding: 5px 0;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-/* hover animatsiya */
+/* Underline hover animation */
 .header__link::after {
   content: "";
   position: absolute;
@@ -48,7 +57,7 @@ header {
   width: 0%;
   height: 2px;
   background: #4CAF50;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .header__link:hover::after {
@@ -71,7 +80,7 @@ header {
   font-size: 20px;
   color: #333;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .header__container i:hover {
@@ -87,118 +96,140 @@ header {
   color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .header__btn:hover {
   background: #43a047;
 }
-/*=== BURGER MENU ===*/
+
+/*======================
+  BURGER MENU STYLES
+=======================*/
 .burger {
-  width: 30px;               /* kengligi */
-  height: 22px;              /* balandligi */
-  display: none;             /* desktopda yashirin */
+  width: 30px;
+  height: 22px;
+  display: none;               /* Desktopda yashirin */
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 999;              /* har doim ustda bo‘lsin */
-  transition: transform 0.3s ease;
+  z-index: 999;
 }
 
 .burger span {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #333;    /* chiziq rangi */
-  border-radius: 2px;        /* yumaloq qirralar */
-  transition: all 0.3s ease; /* animatsiya silliqligi */
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* X holati animatsiyasi */
 .burger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
+
 .burger.active span:nth-child(2) {
-  opacity: 0;                /* o‘rta chiziq yo‘q bo‘lsin */
+  opacity: 0;
 }
+
 .burger.active span:nth-child(3) {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Hover effekti */
 .burger:hover span {
-  background-color: #4CAF50; /* yashil rang hoverda */
+  background-color: #4CAF50;
 }
 
-/*=== MOBILE MENU DISPLAY ===*/
-@media (max-width: 768px) {
+/*======================
+  MOBILE MENU
+=======================*/
+@media (max-width: 1024px) {
+  /* Burger ko‘rinadi */
   .burger {
-    display: flex; 
+    display: flex;
   }
 
-  .header__list {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100px;
-    height: 100px;
-    background-color: #f9f9f9;
-    flex-direction: column;
-    padding-top: 120px;
-    gap: 30px;
-    transition: right 0.4s ease;
-    box-shadow: -2px 0 15px rgba(0,0,0,0.1);
-    z-index: 998;
-  }
-
-  .header__list.active {
-    right: 0;           /* menyu ochilganda */
-  }
+  /* Menu mobilga moslashadi */
+.header__list {
+  position: fixed;
+  top: 0;
+  left: -100%;        /* O‘ngdan emas, chapdan yashirin */
+  width: 260px;       /* yoki 80% ekran kengligi */
+  height: 100vh;
+  background: #f9f9f9;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 60px;
+  transition: left 0.4s ease; /* right -> left */
+  box-shadow: 2px 0 15px rgba(0,0,0,0.1); /* chap tomonda soya */
+  z-index: 998;
 }
 
-/*=== MOBILE MENU LINKS CENTER ===*/
-@media (max-width: 768px) {
-  .header__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  /* vertikal markazlash */
-    align-items: center;      /* gorizontal markazlash */
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 260px;
-    height: 100vh;
-    background: #f9f9f9;
-    padding-top: 0;           /* yuqoridan bo‘sh joyni olib tashladik */
-    gap: 40px;                /* linklar orasidagi bo‘shliq */
-    transition: right 0.4s ease;
-    box-shadow: -2px 0 15px rgba(0,0,0,0.1);
-    z-index: 998;
-  }
+.header__list.active {
+  left: 0;           /* Menu ochilganda chapdan chiqadi */
+}
+
 
   .header__list.active {
     right: 0;
   }
 
-  /* linklar dizayni */
   .header__list a {
-    font-size: 1.3rem;          /* kattaroq shrift */
+    font-size: 1.3rem;
     color: #333;
-    text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    text-align: center;
     letter-spacing: 1px;
+    transition: all 0.3s ease;
   }
 
-  /* hover effekti */
   .header__list a:hover {
     color: #4CAF50;
     transform: scale(1.1);
   }
 
+  /* Right icons va login button mobilga moslashadi */
+  .header__container span {
+    gap: 15px;
+  }
+
+  .header__btn {
+    padding: 8px 18px;
+    font-size: 15px;
+  }
+}
+
+/*======================
+  TABLET STYLES
+=======================*/
+@media (max-width: 768px) {
+  .header__list {
+    width: 220px;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__list {
+    width: 180px;
+    gap: 30px;
+  }
+
+  .header__list a {
+    font-size: 1.1rem;
+  }
+
   .burger {
-    display: flex;
-    z-index: 999;
+    width: 28px;
+    height: 20px;
+  }
+
+  .burger span {
+    height: 2.5px;
   }
 }
 
