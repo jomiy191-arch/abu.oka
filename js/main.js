@@ -336,3 +336,4 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPriceSpan.innerText = (price * quantity).toFixed(2);
     });
 });
+    
