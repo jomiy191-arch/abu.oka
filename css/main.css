@@ -1242,7 +1242,7 @@ header {
     }
 }
 .footer {
-  background: #f3f5f7;
+  background: #FBFBFB;
   padding: 40px 70px;
   font-family: Arial;
   margin-top: 20px;
@@ -1329,15 +1329,19 @@ header {
   width: 45px;
   margin-right: 10px;
 }
-
-.copy {
-  text-align: center;
-  margin-top: 30px;
-  color: #555;
+.icons{
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    color: rgba(0, 0, 0, 0.742);
+    font-size: 18px;
 }
-/* ===== Responsive ===== */
+.copy1{
+  text-align: center;
+  margin-top: 1000px;
+  color: #362121;
+}
 
-/* 768px dan kichik ekranlar uchun */
+
 @media (max-width: 768px) {
     .main1__container {
         flex-direction: column;
@@ -1531,5 +1535,62 @@ header {
 
     .air-box {
         padding: 15px 10px;
+    }
+}
+.footer__list {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+    list-style: none;
+    background: #46A3581A;
+    padding: 0;
+    flex-wrap: wrap; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.footer__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3D3D3D;
+    max-width: 250px;
+}
+
+.footer__item i {
+    color: #46A358;    
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #3D3D3D;
+    transition: 0.3s;
+}
+
+.footer__link:hover {
+    color: #46A358;
+}
+
+.footer__logo img {
+    width: 120px;
+}
+@media (max-width: 900px) {
+    .footer__list {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer__item {
+        max-width: 100%;
     }
 }
