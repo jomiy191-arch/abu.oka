@@ -114,7 +114,7 @@ header {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #a96666;
+  background-color: #333;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
